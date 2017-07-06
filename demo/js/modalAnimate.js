@@ -24,13 +24,13 @@
 
         if(settings.autoEffect === true){
             var effect = $(modal).attr('data-effect')
-            $('#modal-container').removeAttr('class').addClass(effect)
+            closeBt.removeAttr('class').addClass(effect)
             $('body').addClass('modal-active')
         }else{
            modal.click(function(event) {
               event.preventDefault();
               var effect = $(modal).attr('data-effect')
-              $('#modal-container').removeAttr('class').addClass(effect)
+              closeBt.removeAttr('class').addClass(effect)
               $('body').addClass('modal-active')
           });
         }
