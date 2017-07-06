@@ -23,14 +23,16 @@
         var closeBt = $('#'+settings.modalTarget);
 
         if(settings.autoEffect === true){
+
             var effect = $(modal).attr('data-effect')
-            $('#modal-container').removeAttr('class').addClass(effect)
+            console.log('here', effect);
+            $('#modal-containers').removeAttr('class').addClass(effect)
             $('body').addClass('modal-active')
         }else{
            modal.click(function(event) {
               event.preventDefault();
               var effect = $(modal).attr('data-effect')
-              $('#modal-container').removeAttr('class').addClass(effect)
+              $('#modal-containers').removeAttr('class').addClass(effect)
               $('body').addClass('modal-active')
           });
         }
